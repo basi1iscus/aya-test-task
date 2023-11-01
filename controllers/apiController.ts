@@ -1,3 +1,4 @@
+import { MIN_DONATION, TOTAL_RENUMERATION } from '../constants/general';
 import { APIResponse, IRemuneration } from '../interfaces';
 import { loadDumpFile } from '../services/parsers/loaderService';
 import { RenumerationService } from '../services/reports/renumeration';
@@ -5,7 +6,10 @@ import { RenumerationService } from '../services/reports/renumeration';
 export class APIController {
   async getRemuneration(): Promise<APIResponse<IRemuneration[]>> {
     try {
-      const data = await new RenumerationService().getRemuneration(10000, 500);
+      const data = await new RenumerationService().getRemuneration(
+        TOTAL_RENUMERATION,
+        MIN_DONATION
+      );
       return {
         success: true,
         data: data,
