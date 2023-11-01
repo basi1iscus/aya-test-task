@@ -1,0 +1,21 @@
+{
+  "name": "aya_software_test_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "fastify": "^4.24.3",
+    "pg": "^8.11.3",
+    "typeorm": "^0.3.17",
+    "typeorm-extension": "^3.1.1",
+    "yaml": "^2.3.3"
+  }
+}

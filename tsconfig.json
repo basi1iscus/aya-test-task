@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "ES2019",
+        "experimentalDecorators": true,
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext"
+    },
+    "exclude": [
+        "node_modules",
+        "./*.json"
+    ]
+}
