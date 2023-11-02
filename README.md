@@ -13,7 +13,7 @@
   ```shell
   npm install
   ```
-3. Copy .env.example file to .env in price_worker folder and make the necessary changes there
+3. Copy .env.example file to .env in project folder and make the necessary changes there
 
 4. Build project
 
