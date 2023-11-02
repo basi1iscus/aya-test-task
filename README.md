@@ -27,7 +27,7 @@
   ```
 
 #### Docker
-Controller server working on 8080 ports on localhost
+Server working on 8080 ports on localhost
 
 To run
 ```shell
