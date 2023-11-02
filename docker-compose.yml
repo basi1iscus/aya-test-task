@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  node_server:
+    build:
+      target: node_server
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8080
+      - PGHOST=postgresql
+      - PGPORT=5432
+      - PGDATABASE=employee
+      - PGUSER=postgres
+      - PGPASSWORD=postgres
+    depends_on:
+      - postgresql
+  postgresql:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=employee
+

@@ -2,7 +2,7 @@ import { Entity, Column, ManyToOne, OneToMany, PrimaryColumn } from 'typeorm';
 import { Department } from './department';
 import { Donation } from './donation';
 import { Salary } from './salary';
-import { EmployeeDTO, RateDTO } from '../interfaces';
+import { EmployeeDTO, RateDTO } from '../../../interfaces';
 
 @Entity()
 export class Employee {

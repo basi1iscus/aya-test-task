@@ -7,7 +7,7 @@ export const getExchangeRateFromCollection = (
   date: Date
 ) => {
   return rates.find(
-    (rate) => rate.date.getTime() === date.getTime() && rate.sign === sign
+    (rate) => rate.date?.getTime() === date.getTime() && rate.sign === sign
   );
 };
 
@@ -23,7 +23,7 @@ export const convertCurrency = (
     if (!rate) {
       throw Error('Could not get exchange rate');
     }
-    exchangeRate = rate.value;
+    exchangeRate = rate.value ?? 0;
   }
   return amount * exchangeRate;
 };

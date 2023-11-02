@@ -1,7 +1,7 @@
 import { Entity, Column, ManyToOne, PrimaryColumn } from 'typeorm';
 import { Employee } from './employee';
-import { RateDTO } from '../interfaces';
-import { convertCurrency } from '../services/helpers/currency';
+import { RateDTO } from '../../../interfaces';
+import { convertCurrency } from '../../../services/helpers/currency';
 
 @Entity()
 export class Donation {

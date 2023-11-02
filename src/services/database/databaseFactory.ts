@@ -1,11 +1,10 @@
 import 'dotenv/config';
 import { DataSource, DataSourceOptions } from 'typeorm';
-import { createDatabase } from 'typeorm-extension';
 
 class DatabaseFactory {
   client: DataSource;
 
-  async connect() {
+  constructor() {
     const options: DataSourceOptions = {
       type: 'postgres',
       host: process.env.PGHOST ?? 'localhost',
@@ -13,16 +12,12 @@ class DatabaseFactory {
       database: process.env.PGDATABASE ?? 'employee',
       username: process.env.PGUSER ?? 'postgres',
       password: process.env.PGPASSWORD ?? '',
-      entities: ['entities/*.ts'],
+      entities: [__dirname + '/entities/*{.js,.ts}'],
     };
 
-    await createDatabase({
-      options,
-      ifNotExist: true,
-    });
-
     this.client = new DataSource(options);
-
+  }
+  async connect() {
     await this.client
       .initialize()
       .then(() => {

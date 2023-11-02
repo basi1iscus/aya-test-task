@@ -14,7 +14,7 @@ export class APIController {
         success: true,
         data: data,
       };
-    } catch (error) {
+    } catch (error: any) {
       console.error(error.message);
       return {
         success: false,
@@ -25,12 +25,8 @@ export class APIController {
 
   async loadDump(): Promise<APIResponse<string>> {
     try {
-      const data = await loadDumpFile('public/dump.txt');
-      return {
-        success: true,
-        data: data,
-      };
-    } catch (error) {
+      return await loadDumpFile('assets/dump.txt');
+    } catch (error: any) {
       console.error(error.message);
       return {
         success: false,

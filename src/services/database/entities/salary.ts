@@ -1,6 +1,6 @@
 import { Entity, Column, ManyToOne, PrimaryColumn } from 'typeorm';
 import { Employee } from './employee';
-import { SalaryDTO } from '../interfaces';
+import { SalaryDTO } from '../../../interfaces';
 
 @Entity()
 export class Salary {

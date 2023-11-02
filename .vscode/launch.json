@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "args": [
-                "index.ts"
+                "src/index.ts"
             ],
             "runtimeArgs": [
                 "-r",

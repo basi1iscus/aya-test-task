@@ -1,14 +1,14 @@
-import { Department } from '../../entities/department';
-import { Donation } from '../../entities/donation';
-import { Employee } from '../../entities/employee';
-import { Salary } from '../../entities/salary';
 import { EmployeeDTO, RateDTO } from '../../interfaces';
+import { Department } from '../database/entities/department';
+import { Donation } from '../database/entities/donation';
+import { Employee } from '../database/entities/employee';
+import { Salary } from '../database/entities/salary';
 
 export class ParserDTO {
   employees: Employee[];
   rates: RateDTO[];
 
-  constructor(employees: EmployeeDTO[], rates: RateDTO[]) {
+  constructor(employees: EmployeeDTO[], rates?: RateDTO[]) {
     this.employees = employees.map((item) => new Employee(item, this.rates));
     this.rates = rates ?? [];
   }
