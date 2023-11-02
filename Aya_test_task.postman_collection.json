@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "46bb3c3e-2f4d-401c-ac58-3717ee7dde60",
+		"name": "Aya test task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22810423",
+		"_collection_link": "https://restless-comet-482049.postman.co/workspace/HR~6a9edb9c-7c24-4baa-be67-fc013b60abb6/collection/22810423-46bb3c3e-2f4d-401c-ac58-3717ee7dde60?action=share&source=collection_link&creator=22810423"
+	},
+	"item": [
+		{
+			"name": "Get remuneration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/v1/remuneration",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"remuneration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Load dump",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/v1/loaddump",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"loaddump"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
