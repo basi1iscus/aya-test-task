@@ -75,4 +75,4 @@ If we have a different file version, we must create a new class that implements 
 >3. In the future the client may want to import files via the web interface,
 >   how can the system be modified to allow this?
 
-   We can modify this.server.post('/api/v1/loaddump') endpoint or create a new endoint that can accept the file with dump in the request body and the controller will send it to dump loader 
+   We can modify this.server.post('/api/v1/loaddump') endpoint or create a new endoint that can accept the file with dump in the request body and the controller will send it to the dump loader 
