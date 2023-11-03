@@ -68,9 +68,9 @@ If we have a different file version, we must create a new class that implements 
 >   the file, and it will need to be received asynchronously (via API)?
 
    We'll create a service that gets exchange rates via API and then we can:
-     - call it from DumpParser and return the exchange rates with employees in IParserDTO as they are now
-     - call it outside DumpParser and puts the rates in constructor ParserDTO as a parameter
-     - create a cron service that gets exchange rates and write it down in the database in order to be used when they are needed
+- call it from DumpParser and return the exchange rates with employees in IParserDTO as they are now
+- call it outside DumpParser and puts the rates in constructor ParserDTO as a parameter
+- create a cron service that gets exchange rates and write it down in the database in order to be used when they are needed
 
 >3. In the future the client may want to import files via the web interface,
 >   how can the system be modified to allow this?
