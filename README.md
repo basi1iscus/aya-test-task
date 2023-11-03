@@ -56,7 +56,7 @@ answering the questions.
 >1. How to change the code to support different file versions?
 >I use Factory Metod pattern and interface IDumpParser
 
-If we have different a file version, we must create a new class that implements interface IDumpParser and returns IParserDTO object and add it to the map in the factory class like this:
+If we have a different file version, we must create a new class that implements interface IDumpParser and returns IParserDTO object and add it to the map in the factory class like this:
   
   ```Shell
   private static parserMap: Record<string, Class> = {
